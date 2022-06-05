@@ -17,6 +17,6 @@ jobs:
     - name: docker login
       run: docker login -u="chandan143" -p="chandan12"
     - name: Build the Docker image
-      run: docker build . --file Dockerfile --tag chandan143/gitpush:$GITHUB_CHA
+      run: docker build . --file Dockerfile -t chandan143/gitpush:$GITHUB_CHA
     - name: Docker push
       run: docker push chandan143/gitpush:$GITHUB_CHA
